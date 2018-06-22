@@ -1,0 +1,42 @@
+
+<div class="container">
+  <div class="alert alert-warning" role="alert">
+    Here are some characters who doesn't have any name so its come first in alphabetical order .Data is sorted according to its name</div>
+
+  <div class="row">
+    <div class="col-md-4 one" *ngFor="let single of allData | orderBy:sortValue " style="padding: 3%; margin-top:3%;">
+
+      <div class="card" style="width: 18rem;  border-color:red;" *ngIf="single.isbn">
+        <fa class="card-img-top" name="book" size="5x" style="color:red;"></fa>
+        <div class="card-body">
+          <h5 class="card-title">{{single.name}}</h5>
+          <button routerLink="/books/{{single.url.split('/').pop()}}" class="card-link btn btn-danger">see details </button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem; border-color: blue; " *ngIf="single.gender">
+
+        <fa class="card-img-top" name="user" size="5x" style="color:blue;"></fa>
+
+        <div class="card-body">
+          <h5 class="card-title">{{single.name || defaultValue}}</h5>
+
+          <button routerLink="/characters/{{single.url.split('/').pop()}}" class="card-link btn btn-primary">see details</button>
+
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem; border-color: green; " *ngIf="single.region">
+
+        <fa class="card-img-top" name="home" size="5x" style="color:green;"></fa>
+
+        <div class="card-body">
+
+          <h5 class="card-title">{{single.name}}</h5>
+          <button routerLink="/houses/{{single.url.split('/').pop()}}" class="card-link btn btn-success">see details</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

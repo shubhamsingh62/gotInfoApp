@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" *ngIf="currentUrl">
+      <div class="card ">
+        <div class="card-body">
+          <fa class="card-img-top one" name="home" size="3x" style="color:green;"></fa>
+
+          <h5 class="card-title" style="text-align: center;">{{currentUrl.name}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="card-body">
+        <div class="row">
+          <div class=" col-lg-6">
+            <h4>Region:</h4>
+          </div>
+          <div class="col-lg-6">
+            <p class="card-title">{{currentUrl.region}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>CoatOfArms:</h4>
+          </div>
+          <div class="col-lg-6">
+            <p class="card-title">{{currentUrl.coatOfArms}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class=" col-lg-6">
+            <h4>Overlord:</h4>
+          </div>
+          <div class="col-lg-6">
+            <p class="card-title">{{currentUrl.overlord}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Words:</h4>
+          </div>
+          <div class="col-lg-6">
+            <p class="card-title">{{currentUrl.words}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 class="card-subtitle mb-2 " *ngIf="currentUrl.titles">Titles:</h4>
+          </div>
+          <div class="col-lg-6">
+            <div *ngFor="let al of currentUrl.titles">
+              <p>{{ al }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 class="card-title " *ngIf="currentUrl.seats">Seats:</h4>
+          </div>
+          <div class="col-lg-6">
+            <div *ngFor="let seat of currentUrl.seats">
+              <p>{{ seat }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 class="card-subtitle mb-2 ">Founded:</h4>
+          </div>
+          <div class="col-lg-6">
+            <p>{{ currentUrl.founded }}</p>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+    <a class="btn btn-success" href="javascript:void(0)" (click)="goBack()" style="margin-top: 3%;">
+    goBack
+    </a>
+  </div>
+
+

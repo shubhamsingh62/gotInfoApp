@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" *ngIf="currentUrl">
+            <div class="card ">
+                <div class="card-body">
+                    <fa class="card-img-top one" name="book" size="3x" style="color:red;"></fa>
+
+                    <h5 class="card-title" style="text-align: center;">{{currentUrl.name}}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class=" col-lg-6">
+                        <h4>Publisher:</h4>
+                    </div>
+                    <div class="col-lg-6">
+
+                        <p class="card-title">{{currentUrl.publisher}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" *ngFor="let author12 of currentUrl.authors">
+
+                <div class="col-lg-6">
+                    <h4 class="card-title  ">Author:</h4>
+                </div>
+                <div class="col-lg-6">
+                    <p>{{ author12 }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <h4>Isbn:</h4>
+                </div>
+                <div class="col-lg-6">
+                    <p class="card-title">{{currentUrl.isbn}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <h4>country:</h4>
+                </div>
+                <div class="col-lg-6">
+
+                    <p class="card-title">{{currentUrl.country}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <h4>numberOfPages:</h4>
+                </div>
+                <div class="col-lg-6">
+
+                    <p class="card-title">{{currentUrl.numberOfPages}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <h4>mediaType:</h4>
+                </div>
+                <div class="col-lg-6">
+
+                    <p class="card-title">{{currentUrl.mediaType }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <h4>released:</h4>
+                </div>
+                <div class="col-lg-6">
+
+                    <p class="card-title">{{currentUrl.released | date }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <a class="btn btn-success" href="javascript:void(0)" (click)="goBack()" style="margin-top: 3%;">
+        goBack
+        </a>
+
+
+</div>

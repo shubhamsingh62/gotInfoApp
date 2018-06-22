@@ -1,0 +1,95 @@
+<div class="container two">
+  <div class="row">
+    <div class="col-md-12" *ngIf="currentUrl">
+      <div class="card ">
+        <fa class="card-img-top one" name="user" size="3x" style="color:blue;"></fa>
+
+        <div class="card-body" *ngFor="let a1 of currentUrl.aliases">
+          <h5 class="card-title" style="text-align: center;">{{a1}}</h5>
+        </div>
+
+      </div>
+    </div>
+    <div class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="card-body">
+        <div class="row">
+          <div class=" col-lg-6">
+            <h4>Name:</h4>
+          </div>
+          <div class="col-lg-6">
+            <p class="card-title">{{currentUrl.name}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Gender:</h4>
+          </div>
+          <div class="col-lg-6">
+            <p class="card-title">{{currentUrl.gender}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Culture:</h4>
+          </div>
+          <div class="col-lg-6">
+            <p class="card-title">{{currentUrl.culture}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Born:</h4>
+          </div>
+          <div class="col-lg-6">
+            <p class="card-title">{{currentUrl.born}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Died:</h4>
+          </div>
+          <div class="col-lg-6">
+            <p class="card-title">{{currentUrl.died}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 class="card-subtitle mb-2 ">Aliases:</h4>
+          </div>
+          <div class="col-lg-6">
+            <div *ngFor="let al of currentUrl.aliases">
+              <p>{{ al }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 class="card-title  ">TvSeries:</h4>
+          </div>
+          <div class="col-lg-6">
+            <div *ngFor="let tv of currentUrl.tvSeries">
+              <p>{{ tv }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 class="card-subtitle mb-2 ">PlayedBy:</h4>
+          </div>
+          <div class="col-lg-6">
+            <div *ngFor="let play of currentUrl.playedBy">
+              <p>{{ play }}</p>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    
+    </div>
+    
+    
+    </div>
+    <a class="btn btn-success" href="javascript:void(0)" (click)="goBack()" style="margin-top: 3%;">
+      goBack
+      </a>
+    </div>

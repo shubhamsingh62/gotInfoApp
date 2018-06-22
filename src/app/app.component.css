@@ -1,0 +1,10 @@
+.col{
+   background-color: black;
+   padding: 3%; 
+}
+#one{
+    color: orange;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Skranji', cursive;
+}
